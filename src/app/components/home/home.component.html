@@ -1,0 +1,24 @@
+<div layout-align="center center">
+  <mat-card class="home-card">
+    <mat-card-content>
+      <h1>Welcome to {{brandName | titlecase}} </h1>
+    </mat-card-content>
+    <h3>Please select your location below</h3>
+    <mat-card-actions>
+      <mat-form-field>
+        <mat-select placeholder="State">
+          <mat-option>None</mat-option>
+          <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select placeholder="State">
+          <mat-option>None</mat-option>
+          <mat-option *ngFor="let state of states" [value]="city">{{state}}</mat-option>
+        </mat-select>
+      </mat-form-field>      
+      <br>
+      <button mat-button>Browse</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
